@@ -1,0 +1,582 @@
+@font-face {
+    font-family: 'NYTCheltenham Book';
+    src: url('fonts/cheltenham/NYTCheltenham-Book.woff2') format('woff2'),
+        url('fonts/cheltenham/NYTCheltenham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NYTFranklin';
+    src: url('fonts/franklin/NYTFranklin-Medium.woff2') format('woff2'),
+        url('font/franklin/NYTFranklin-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: #fff;
+    --black: #121212;
+    --grey: #E2E2E2;
+    --blue: #567B95;
+    --blue-hover: #406077;
+}
+
+html {
+    box-sizing: border-box;
+    color: var(--black);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* BACK BUTTON STYLING */
+.back-button {
+    position: fixed;
+    left: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #639fab;
+    border-radius: 5px;
+    padding: 10px 16px;
+    box-shadow: 0 8px 8px -6px black;
+    z-index: 999;
+}
+
+.back-button a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.back-button a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.back-button a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+/* END BACK BUTTON STYLING */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: 'NYTCheltenham Book';
+}
+
+.navbar-container {
+    display: flex;
+    background-color: var(--white);
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    border-bottom: 1px var(--grey) solid;
+    justify-content: space-around;
+}
+
+.navbar-container .navbar-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-container .item3 {
+    font-family:'NYTFranklin';
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.navbar-container .item3 a:hover {
+    text-decoration: underline;
+}
+
+.navbar-container .item4 {
+    margin: 0 200px 0 200px;
+}
+
+.navbar-container .button {
+    font-family: 'NYTFranklin';
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: 12px;
+    line-height: 0px;
+    font-weight: 800;
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.navbar-container .button:hover {
+    background-color: var(--blue-hover);
+}
+
+
+.main {
+    width: 48%;
+    margin: 60px auto;
+}
+
+.main h1 {
+    font-size: 38px;
+    font-style: italic;
+}
+
+.main p {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.main a {
+    color: var(--blue);
+}
+
+.main figure {
+    margin: 50px 0;
+}
+
+.main figcaption {
+    text-align: left;
+    color: #8d8d8d;
+}
+
+.main-photo {
+    width: 75vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .author {
+    font-family: 'NYTFranklin';
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.main .author a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--grey);
+}
+
+.author a:hover {
+    text-decoration: none;
+}
+
+.share-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.share-container .right {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.share-container .right .bubble {
+    background-color: var(--grey);
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.share-container .right a {
+    color: inherit;
+}
+
+.share-container .right .bubble:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    padding: 4px 9px;
+    border: 1px solid var(--grey);
+}
+
+.share-container .right .fa-bookmark {
+    margin-top: 5px;
+}
+
+.share-container .right .fa-bookmark:hover {
+    color: var(--grey);
+}
+
+.editors-picks {
+    position: absolute;
+    right: 40px;
+    width: 250px;
+}
+
+.editors-picks-articles {
+    border-top: 1px solid var(--grey);
+    padding-top: 20px;
+}
+
+.editors-picks-articles p {
+    font-size: 16px;
+    color: #6e6e6e;
+}
+
+.editors-picks-articles a {
+    text-decoration: none;
+}
+
+.editors-picks-articles a:hover {
+    text-decoration: underline;
+}
+
+#footnote {
+    font-family: 'NYTFranklin';
+    font-size: 12px;
+    color: #6e6e6e;
+    line-height: 12px;
+}
+
+#footnote a {
+    color: inherit;
+}
+
+#footnote a:hover {
+    text-decoration: none;
+}
+
+.inflation  {
+    position: relative;
+    width: 75vw;
+    margin-top: 50px;
+    margin-left: 50%;
+    margin-bottom: 50px;
+    transform: translateX(-50%);
+}
+
+.inflation h3 {
+    margin-bottom: -10px;
+}
+
+.inflation p {
+    line-height: 18px;
+    font-size: 16px;
+    color: #8d8d8d;
+}
+
+.inflation img {
+    width: 75vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.i-g-1 {
+    position: absolute;
+    top: 30%;
+    display: grid;
+    z-index: 999;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+}
+
+.i-g-1 p {
+    font-family: 'NYTFranklin';
+    color: var(--black);
+    font-size: 14px;
+}
+
+.i-g-2 {
+    position: absolute;
+    top: 70%;
+    display: grid;
+    z-index: 999;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 12px;
+}
+
+.i-g-2 p {
+    font-family: 'NYTFranklin';
+    color: var(--black);
+    font-size: 14px;
+}
+
+.inflation #authors {
+    font-family: 'NYTFranklin';
+    color: var(--black);
+}
+
+.share-container-end {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+
+.comment-button {
+    background-color: var(--blue);
+    font-family: 'NYTFranklin';
+    color: var(--white);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.comment-button:hover {
+    background-color: var(--blue-hover);
+    cursor: pointer;
+}
+
+.comment-button p {
+    padding: 2px 40px;
+    font-size: 16px;
+}
+
+.share-container-end .right-end {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.share-item-end {
+    background-color: var(--grey);
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.share-item-end a {
+    color: inherit;
+}
+
+.share-item-end:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    padding: 4px 9px;
+    border: 1px solid var(--grey);
+}
+
+footer {
+    border-top: 1px solid var(--grey);
+    font-family: 'NYTFranklin';
+    font-size: 14px;
+    line-height: 22px;
+}
+
+footer img {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer lh {
+    font-weight: 800;
+}
+
+footer li {
+    font-weight: 200;;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links-lists {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.subscribe {
+    text-align: left;
+    line-height: 32px;
+    border-left: 1px solid var(--grey);
+    margin-bottom: 10px;
+}
+
+.subscribe .misc {
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.more-articles {
+    display: flex;
+    margin-left: 30px;
+}
+
+.more-articles-section {
+    border-top: 1px solid var(--black);
+    width: 95%;
+    margin: auto;
+}
+
+.more-in-space {
+    display: grid;
+    grid-template-rows: repeat(2, 50vh);
+    grid-template-columns: repeat(3, 20vw);
+    align-items: center;
+    grid-gap: 30px;
+}
+
+.mis-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.mis-item figure {
+    margin-left: -10px;
+    width: 260px;
+}
+
+.more-in-space img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.more-in-space figcaption {
+    font-size: 12px;
+    text-align: right;
+    color: #b2b2b2;
+}
+
+.more-in-space a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.more-in-space a:hover {
+    color: #b2b2b2;
+}
+
+.more-in-space p {
+    font-family: 'NYTFranklin';
+    color: #b2b2b2;
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+.ep-container {
+    border-top: 1px solid var(--black);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.ep {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    align-items: center;
+    grid-gap: 30px;
+}
+
+.ep-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.ep-item figure {
+    margin-left: -10px;
+    width: 260px;
+}
+
+.ep img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.ep figcaption {
+    font-size: 12px;
+    text-align: right;
+    color: #b2b2b2;
+}
+
+.ep a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ep a:hover {
+    color: #b2b2b2;
+}
+
+.ep p {
+    font-family: 'NYTFranklin';
+    color: #b2b2b2;
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+.mp {
+    width: 33.33%;
+    border-top: 1px solid var(--black);
+    margin-right: 30px;
+}
+
+#mp-header, #mis-header, #ep-header {
+   font-family: 'NYTFranklin'; 
+   font-size: 16px;
+}
+
+.mp-item {
+    border-top: 1px solid var(--grey);
+}
+
+.mp a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mp a:hover {
+    color: #b2b2b2;
+}
+
+.mp h4 {
+    font-size: 19px;
+}
+
+footer .bottom-container {
+    border-top: 1px solid var(--grey);
+}
+
+footer .bottom-container .nyt {
+    font-size: 12px;
+    text-align: center;
+}
+
+footer .bottom-container a {
+    font-family: 'NYTFranklin';
+    color: #6e6e6e;
+    text-decoration: none;
+}
+
+footer .bottom-container a:hover {
+    text-decoration: underline;
+}
+
+footer .bottom {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+}

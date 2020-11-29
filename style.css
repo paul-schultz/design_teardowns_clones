@@ -1,0 +1,254 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(45deg, #1c5d99 50%, #639fab 50%) ;
+    background-size: cover;
+}
+
+h1, h2, h4, p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1, h4 {
+    color: #222;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+    background-color: #222;
+    padding: 5px 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 10px 10px -6px black;
+}
+
+p {
+    color: #222;
+    font-size: 14px;
+    
+}
+
+.nav {
+    background: linear-gradient(45deg, white 80%, #1c5d99 80%);
+    width: 100vw;
+    height: 10vh;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.nav:hover {
+    cursor: default;
+}
+
+.info h2 {
+    border-radius: 5px;
+    width: 50vw;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.info:hover {
+    cursor: default;
+}
+
+.container {
+    height: 100vh;
+    width: 80vw;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    background-color: transparent;
+    width: 200px;
+    height: 270px;
+    perspective: 1000px;
+    
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-content {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.card-front {
+    background-color: #BBCDE5;
+    color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-back {
+    background-color: #BBCDE5;
+    color: black;
+    transform: rotateY(180deg);
+    position: relative;
+}
+
+.card-back:hover {
+    cursor: default;
+}
+
+.card-text {
+    height: 200px;
+    width: 200px;
+}
+
+.card-text p {
+    width: 90%;
+    margin: auto;
+    padding-top: 14px;
+}
+
+.card-back a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-back h2:hover {
+    cursor: pointer;
+}
+
+.fill-down:before {
+    content: "";
+    top: 0
+}
+
+.fill-down {
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.fill-down {
+    -ms-user-select: none;
+    padding: 10px
+}
+
+/* .fill-down:after,
+.fill-down:before {
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s
+} */
+
+
+.fill-down {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    user-select: none;
+    transition: color 1s ease
+}
+
+/* .fill-down:focus,
+.fill-down:hover{
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -ms-transition: color 1s ease;
+    -o-transition: color 1s ease
+} */
+
+.fill-down:focus,
+.fill-down:hover {
+    outline: 0;
+    color: #1B98E0;
+    transition: color 1s ease;
+    cursor: pointer
+}
+
+.fill-down:after,
+.fill-down:before {
+    transition: all 1s ease 0s
+}
+
+.fill-down:focus:after,
+.fill-down:focus:before,
+.fill-down:hover:after,
+.fill-down:hover:before {
+    outline: 0;
+    background-color:#FDCA40;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s
+}
+
+.fill-down:before {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 3px;
+    right: 0
+}
+
+.fill-down:focus:before,
+.fill-down:hover:before {
+    width: 100%;
+    height: 100%
+}
+
+.fill-down:hover {
+    color: white!important
+}
+
+.footer {
+    background: linear-gradient(45deg, #639fab 20%, white 20%);
+    width: 100vw;
+    height: 10vh;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
