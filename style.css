@@ -252,3 +252,29 @@ p {
     overflow: hidden;
 }
 
+@media screen and (max-width: 1000px) {
+    html {
+        overflow: auto;
+    }
+    .container {
+        height: +500px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-right: 40px;
+    }
+    .container {
+        height: 110vh;
+    }
+    .card-container {
+        width: 50vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+        margin: auto;
+    }
+    .footer {
+        margin-top: 100px;
+    }
+}
+
