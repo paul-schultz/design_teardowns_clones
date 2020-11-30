@@ -7,3 +7,4 @@ And scroll over one of the cards to flip it and learn more about what techniques
 And then click on the backside button to visit the page:  
 ![Hover Animation Gif](./gif/hover.gif)  
 And then once you are done looking at the page there is a button to take you back to the gallery!
+![Back Animation GIF](./gif/back.gif)
